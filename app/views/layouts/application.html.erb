@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyBootstrapBlog</title>
+    <title>Blog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,18 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-faded">
+      <a class="navbar-brand" href="/">Ruby Blog</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <div class="float-xs-right">
+        <a href="/login" class="btn btn-outline-success">Sign In</a>
+        <a href="/login" class="btn btn-success">Sign Up</a>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
